@@ -1,0 +1,21 @@
+<app-header title="My Account" [additemButton] ="false"></app-header>
+
+<ion-content [fullscreen]="true">
+ 
+
+
+<ion-card>
+  <ion-avatar>
+    <!--https://s.gravatar.com/avatar/a1cdd5f0ba5d52aa2098bf74c046af27?s=80-->
+    <img src="{{this.gravatar}}">
+  </ion-avatar>
+  <ion-card-header>
+    <ion-card-subtitle>Account Details</ion-card-subtitle>
+    <ion-card-title>Name: {{username}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-button (click)="logout()">Logout</ion-button>
+  </ion-card-content>
+</ion-card>
+</ion-content>

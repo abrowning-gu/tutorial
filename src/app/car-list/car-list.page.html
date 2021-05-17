@@ -1,0 +1,27 @@
+<app-header title="2701ICT - Car Sightings" [additemButton] ="true"></app-header>
+
+
+<ion-content class="ion-padding">
+
+
+
+<ion-list >
+ 
+    <ion-item-sliding *ngFor ="let car of cars; let i=index" #slidingItem>
+      <ion-item (click)="cardetails(i)">
+        <ion-label>{{car.carMake}} {{car.carModel}} </ion-label>
+        <ion-note slot="end">{{car.carCount}}</ion-note>
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option (click)="increment(i, slidingItem)">Increment</ion-item-option>
+        <ion-item-option color="danger" (click)="deleteitem(i)">Delete</ion-item-option>
+      </ion-item-options>
+  </ion-item-sliding>
+  
+  
+
+</ion-list>
+
+</ion-content>
+
+

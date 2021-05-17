@@ -1,0 +1,20 @@
+<app-header title="Car Counter" [additemButton] ="false"></app-header>
+<ion-content class="ion-padding">
+  <h2>Login</h2>
+
+  <ion-list >
+    <ion-item>
+      <ion-input [(ngModel)]="curuser.username" placeholder="username" name="username" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="curuser.password" placeholder="Password" name="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+<ion-button expand="full" size="medium" shape="round" color="success"  (click)="login()" >Login<ion-icon slot="end" name="log-in"></ion-icon></ion-button>
+
+<a routerLink="/register"><div class="centre">Register</div></a>
+
+
+</ion-content>

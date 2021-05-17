@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add a New Car</ion-title>
+    <ion-buttons slot="start" >
+      <ion-button (click)="cancelModal()">Cancel</ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!--<app-modalheader title="Add a New Car"></app-modalheader>-->
+<ion-content fullscreen>
+
+  
+ <ion-list>
+    <ion-item>
+      <label for="carmake">Car Make</label>
+      <ion-select [(ngModel)]="carMake" slot="end" id="carmake" name="carmake">
+        <ion-select-option value="Aston Martin">Aston Martin</ion-select-option>
+        <ion-select-option value="audi">Audi</ion-select-option>
+        <ion-select-option value="Bentley">Bentley</ion-select-option>
+        <ion-select-option value="BMW">BMW</ion-select-option>
+        <ion-select-option value="Cherry">Chery</ion-select-option>
+        <ion-select-option value="Chrysler">Chrysler</ion-select-option>
+        <ion-select-option value="ford">Ford</ion-select-option>
+        <ion-select-option value="Great Wall">Great Walln</ion-select-option>
+        <ion-select-option value="Holden">Holden</ion-select-option>
+        <ion-select-option value="Honda">Honda</ion-select-option>
+        <ion-select-option value="Hyundai">Hyundai</ion-select-option>
+        <ion-select-option value="Izuzu">Izuzu</ion-select-option>
+        <ion-select-option value="Jaguar">Jaguar</ion-select-option>
+        <ion-select-option value="Kia">Kia</ion-select-option>
+        <ion-select-option value="Mazda">Mazda</ion-select-option>
+        <ion-select-option value="Mercedes Benz">Mercedes Benz</ion-select-option>
+        <ion-select-option value="Mitsubishi">Mitsubishi</ion-select-option>
+        <ion-select-option value="Nissan">Nissan</ion-select-option>
+        <ion-select-option value="Peugeot">Peugeot</ion-select-option>
+        <ion-select-option value="Porsche">Porsche</ion-select-option>
+        <ion-select-option value="Range Rover">Range Rover</ion-select-option>
+        <ion-select-option value="Suzuki">Suzuki</ion-select-option>
+        <ion-select-option value="Tesla">Tesla</ion-select-option>
+        <ion-select-option value="Toyota">Toyota</ion-select-option>
+        <ion-select-option value="Volkswagen">Volkswagen</ion-select-option>
+        <ion-select-option value="Volvo">Volvo</ion-select-option>
+        
+  
+      </ion-select>
+  
+    </ion-item>
+    
+    <ion-item>
+      <label for="model">Model</label>
+      <ion-input [(ngModel)]="carModel" type="text" id="model" name="model" slot="end"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <label for="bodytype">Body Type</label>
+      <ion-select [(ngModel)]="carBodyType" id="bodytype" name="bodytype" slot="end">
+        <ion-select-option value="Convertible">Convertible</ion-select-option>
+        <ion-select-option value="Coupe">Coupe</ion-select-option>
+        <ion-select-option value="Sedan">Sedan</ion-select-option>
+        <ion-select-option value="Hatch">Hatch</ion-select-option>
+        <ion-select-option value="SUV">SUV</ion-select-option>
+        <ion-select-option value="Wagon">Wagon</ion-select-option>
+        <ion-select-option value="Van">Van</ion-select-option>
+        <ion-select-option value="Ute">Ute</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <label for="yearbuilt">Year Built</label>
+      <ion-select [(ngModel)]="carYearBuilt" id="yearbuilt" name="yearbuilt" slot="end" >
+        <ion-select-option value="{{buildyear}}" *ngFor="let buildyear of caryears">{{buildyear}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+ 
+    <ion-item>
+      <label for="colour">Colour</label>
+      <ion-input [(ngModel)]="carColour" type="text" id="colour" name="colour" slot="end"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <label for="badge">Badge</label>
+      <ion-input [(ngModel)]="carBadge" type="text" id="badge" name="badge" slot="end"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <label for="price">Price</label>
+      <ion-input [(ngModel)]="carPrice" type="text" id="price" name="price" slot="end"></ion-input>
+    </ion-item>
+  
+   
+  </ion-list>
+ 
+ 
+  
+  <ion-button color="primary" expand="full" (click)="closeModal();">Save</ion-button>
+  
+  
+  </ion-content>

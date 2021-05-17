@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons slot="end" *ngIf="additemButton">
+      <ion-button (click) ="addNewCar()" >
+        <ion-icon slot="icon-only" name="car"></ion-icon>
+      </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
